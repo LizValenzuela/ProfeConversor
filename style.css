@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    background: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9uZG8lMjBkZSUyMHBhcmVkfGVufDB8fDB8fHww') repeat-x;
+
+}
+
+#contenedor {
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: url('https://static.vecteezy.com/system/resources/previews/006/664/855/non_2x/blank-green-blackboard-or-school-board-background-and-texture-education-and-back-to-school-concept-free-vector.jpg') repeat-x;
+    position: relative;
+
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor::before,
+#contenedor::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0.5cm;
+    background: url('https://img.freepik.com/fotos-premium/viejo-fondo-textura-madera-vintage_55716-1138.jpg') repeat-x;
+    z-index: 0;
+}
+
+#contenedor::before {
+    top: 0;
+}
+
+#contenedor::after {
+    bottom: 0;
+}
+
+.convertidor {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
+    margin-bottom: 20px;
+
+}
+
+.titulo {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 13px;
+    font-family: 'Permanent Marker', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.explicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: #0e0e0e;
+    text-align: center;
+    display: none;
+}
+
+.calcular {
+    padding: 10px 20px;
+    margin: 25px;
+    background-color: #D7FED6;
+    ;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cajaDeValores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff00;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.valor {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+.valor input,
+.unidadMedida select {
+    width: 28%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #517d5071;
+    color: white;
+
+}
+
+.texValor {
+    margin-right: 115px;
+}
+
+.unidadMedida {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+select {
+    padding: 5px;
+    font-size: 16px;
+    height: 100%;
+    width: 28%;
+    background-color: #517d5071;
+    color: white;
+}
+
+#contenedor .convertidor button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.seleccionado {
+    background: #00FFFF;
+    background-color: #0e0e0e;
+}
+
+.btnUnidad {
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    color: white;
+}
+
+#resultado {
+    color: white;
+
+}
+
+#medida1 {
+    color: yellow;
+}
+
+#medida2 {
+    font-weight: bolder;
+    color: #00FFFF;
+
+}
+
+#contenedor {
+    perspective: 1000px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+
+}
+
+.btnUnidad {
+    transition: transform 0.3s;
+}
+
+.btnUnidad:hover {
+    transform: rotateY(30deg);
+}
+
+#operacion {
+    font-weight: bolder;
+    color: #00FFFF;
+}
+
+#unidad {
+    font-weight: bolder;
+    color: #00FFFF;
+}
+
+.reveal {
+    opacity: 0;
+    animation: revealText 5s forwards;
+    display: inline-block;
+    animation-delay: 0.1s;
+}
+
+@keyframes revealText {
+    to {
+        opacity: 1;
+    }
+}
